@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.smbms.dao.provider.ProviderDao">
+<cache-ref namespace="cn.smbms.dao.user.UserDao"/>
+<select id="getProviderList" resultType="provider">
+	select * from smbms_provider
+	<where>
+		<if test="proName!=null and proName!=''">
+		 and proName like "%"#{proName}"%"
+		</if>
+		<if test="proCode!=null and proCode!=''">
+		 and proCode like "%"#{proCode}"%"
+		</if>	
+	</where>
+</select>
+</mapper>
+

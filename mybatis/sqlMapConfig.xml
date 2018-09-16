@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--  <settings>
+ 默认开启二级缓存
+ <setting name="cacheEnabled" value="true"/>
+  lazyLoadingEnabled默认false
+  <setting name="lazyLoadingEnabled" value="false"/>
+  属性按需加载，默认true直接取所有属性
+  <setting name="aggressiveLazyLoading" value="true"/>
+ </settings> -->
+ <typeAliases>
+	 <!-- 批量别名 -->
+	 <package name="cn.smbms.pojo"/>
+ </typeAliases>
+</configuration>
